@@ -24,3 +24,33 @@ if __name__ == "__main__":
   """
   [output_expression for element in list]
   """
+
+  # Python list comprehension with if condition
+
+  mountains = [
+    ["Makalu", 8485],
+    ["Lhotse", 8516],
+    ["Kanchendzonga", 8586],
+    ["K2", 8611],
+    ["Everest", 8848]
+  ]
+  print(mountains)
+
+  highest_mountains = list(filter(lambda mountain: mountain[1] > 8_600, mountains))
+  print(highest_mountains)
+
+  """
+  [output_expression for element in list if condition]
+  """
+
+  mountains = [
+    ["Makalu", 8485],
+    ["Lhotse", 8516],
+    ["Kanchendzonga", 8586],
+    ["K2", 8611],
+    ["Everest", 8848]
+  ]
+  print(mountains)
+
+  highest_mountains = [mountain for mountain in mountains if mountain[1] > 8600]
+  print(highest_mountains)
